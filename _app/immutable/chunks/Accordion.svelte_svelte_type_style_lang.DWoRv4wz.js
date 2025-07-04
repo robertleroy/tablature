@@ -1,0 +1,1 @@
+function i(t,e,s,n){var r=t.__styles??(t.__styles={});r[e]!==s&&(r[e]=s,s==null?t.style.removeProperty(e):t.style.setProperty(e,s,""))}function l(t){if(t.length)return t.toLowerCase().split(" ").map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ")}export{i as s,l as t};
