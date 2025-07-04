@@ -28,18 +28,8 @@
 
   setContext('ctx', ctx);
 
-  // console.log("tunings", tunings);
 
   const groups = [...new Set(tabs.map(el => el.artist_display))].sort();
-  // const tunings = [...new Set(tabs.map(el => el.tuning))].sort();
-
-  // let tabsByTuning = $derived.by(() => {
-  //   if (selectedTuning) {
-  //     return tabs.filter(el => el.tuning == selectedTuning);
-  //   }
-  //   return tabs;
-  // });
-
 
   let sortedTabs = $derived.by(() => {
     let arr = selectedTuning ?
@@ -48,41 +38,7 @@
     return arr.sort((a,b) => a.title.localeCompare(b.title))
   });
 
-
-  // const sortedTabs = tabs.sort((a,b) => a.title.localeCompare(b.title));
-
-  // const sortedTabs = () => {
-  //   let arr = selectedTuning ? tabs.filter(el => el.tuning == selectedTuning) : tabs;
-  //   return arr.sort((a,b) => a.title.localeCompare(b.title));
-  // }
-
-  //   let sortedTabs = $derived.by(() => {
-  //   let arr = selectedTuning ? tabs.filter(el => el.tuning == selectedTuning) : tabs;
-  //   return arr.sort((a,b) => a.title.localeCompare(b.title))
-  // });
-  
-  // console.log(selectedTuning,tabsByTuning);
-
-  // function tabsByTuning() {
-  //   if (selectedTuning) {
-  //     return tabs.filter(el => el.tuning == selectedTuning);
-  //   }
-  //   return tabs;
-  // }
-
-  // console.log(tabsByTuning());
-
-  // initContext();
-  // function initContext() {
-  //   setContext('selectedArtist', selectedGroup);
-  //   setContext('selectedTab', selectedTab);
-  // }
-
-  // Context data to Treenode
-  // setContext('sidebarOpen', sidebarOpen);  
-
   $effect(() => {
-    // console.log(sortedTabs.filter(el => el.artist_display === ctx.selectedGroup));
     if (innerWidth > 840) sidebarOpen.value = false;
   })
 
@@ -174,12 +130,11 @@ function getUniqueProperties(arr, prop = 'tags') {
       
       <button class="title unset"
         onclick={() => {
-          // unset ctx
           ctx.selectedGroup = null;
           ctx.selectedTab = null;
       }}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="fill: gainsboro; mix-blend-mode: difference;">
-          <path d="M18.8 33.2 9.6 24l9.2-9.2L16 12 4 24l12 12Zm10.4 0 9.2-9.2-9.2-9.2L32 12l12 12-12 12Z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+        <path d="M12.11 1v11.604A5.5 5.5 0 0 0 9.61 12a5.5 5.5 0 0 0-5.5 5.5 5.5 5.5 0 0 0 5.5 5.5 5.5 5.5 0 0 0 5.5-5.5V6h5V1h-5z"/>
         </svg>
         <h1 class="h3">{dev ? appName + ":dev " : appName}</h1>
       </button>
