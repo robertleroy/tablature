@@ -1,4 +1,4 @@
-# Tablature - tablature
+# Tablature - update - unbug..
 
 # [Tablature](https://robertleroy.github.io/tablature/)
 
@@ -14,10 +14,3 @@ npm run gh-pages
 
 ```
 
-
-```sh
-git init && git add . && git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/robertleroy/tablature.git
-git push -u origin main
-```
