@@ -1,0 +1,209 @@
+/* #region forms 10/14/24 */
+:root {
+  --x: 1.5; /* button height multiplier */
+  --width-number: 6em;
+
+  --bg-textbox: light-dark(hsl(206 48 98), hsl(0 0 14));
+  --bg-button: light-dark(hsl(206 48 98), hsl(0 0 14));
+
+  --button-height: calc((1em + 2px) * var(--x));
+  --border-width-button: 0.0625em;
+  --border-style-button: solid;
+  --border-color-button: light-dark(hsl(207 20 80), hsl(0 0 40 / 0.5));
+  --border-color-button-hover: light-dark(hsl(207 20 65), hsl(0 0 40));
+  --border-button: var(--border-width-button) 
+    var(--border-style-button) 
+    var(--border-color-button);
+  --border-radius-button: 0.25em;
+  --box-shadow-button: none;
+
+  --outline-color: light-dark(hsl(206 64 44), hsl(0 0 50));
+  --outline: 1px solid var(--outline-color);
+  --fg-checkbox: light-dark(hsl(0 0 30), hsl(0 0 63));
+  --vertical-align: top;
+}
+input:not([type="checkbox"], [type="radio"]),
+select, textarea, button, a.button {
+  appearance: auto;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  font-size: calc(1em - 2px);
+  height: var(--button-height);
+  line-height: calc(var(--button-height) - 2px);
+  max-width: 100%;
+  padding: 0 0.5rem 0;
+  margin: 0;
+  border: var(--border-button);
+  border-radius: var(--border-radius-button);
+  outline: none;
+  vertical-align: var(--vertical-align);
+  &:disabled {
+    cursor: default;
+    box-shadow: none;
+    background: hsla(0, 0%, 50%, 0.05);
+    opacity: 0.6;
+  }
+}
+
+/* #region button */
+button, select, a.button, [type="button"],
+[type="color"], [type="submit"],
+[type="reset"], [type="image"] {
+  display: inline-flex;
+  background-color: var(--bg-button);
+  box-shadow: var(--box-shadow-button);
+  cursor: pointer;
+  &:hover:not(:active,:disabled) {
+    color: var(--fg-heading);
+    border-color: var(--border-color-button-hover);
+  }
+}
+select {
+  min-width: 8em;
+  width: max-content;
+}
+select, select > option {
+  color: inherit;
+}
+select[multiple] {
+  padding: 0;
+  height: fit-content;
+  box-shadow: unset;
+  & option { padding: 0.1875em 0.5em; }
+  & option:checked { background-color: hsla(0,0%,50%,0.1); }
+}
+a.button {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  line-height: var(--button-height);
+}
+input[type="color"] {
+  width: 3em;
+  padding: 0.375em;
+}
+optgroup {
+  margin: 0;
+  font-family: inherit;
+}
+.btn { cursor: pointer; }
+button.unset {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  height: unset;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: unset;
+  text-align: unset;
+  box-shadow: unset;
+}
+[type="image"] {
+  vertical-align:  var(--vertical-align) !important;
+}
+/* #endregion button */
+
+/* #region textbox */
+[type="text"],[type="number"],[type="search"],
+[type="email"],[type="password"],
+[type="tel"], [type="url"],
+[type="datetime-local"],[type="date"],
+[type="week"],[type="month"],[type="time"] {
+  background-color: var(--bg-textbox);
+  padding-bottom: 0.0625em;
+  &:focus {
+    outline: var(--outline);
+    border-color: var(--outline-color);
+  }
+}
+input[type="number"] {
+  width: var(--width-number);
+  max-width: 100%;
+  min-width: 4em;
+  padding-right: 0;
+}
+textarea {
+  line-height: 1.5;
+  height: 5em;
+  background-color: var(--bg-textbox);
+  vertical-align: var(--vertical-align);
+}
+/* #endregion textbox */
+
+/* #region checkbox */
+label:has([type="checkbox"], [type="radio"]) {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0 0.25ch;
+  cursor: pointer;
+  & [type="checkbox"], [type="radio"] {
+    line-height: 0;
+  }
+}
+
+[type="checkbox"], [type="radio"] {
+  --cb-size: 1em;
+  --vertical-align: top;
+  appearance: unset;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  font-size: inherit;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0;
+  background-color: unset;
+  border: none;
+  vertical-align: var(--vertical-align);
+  user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before, &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: "";
+    height:var(--cb-size);
+    width:var(--cb-size);
+  }
+  &::after { scale: 0; }
+  &:checked::after { scale: 1; }
+  &::before {
+    --border-color-button: 
+      light-dark(hsl(207 20 60), hsl(0 0 45));
+    --border-color-button-hover: 
+      light-dark(hsl(207 20 30), hsl(0 0 60));
+    --border-radius-button: 0.25em;
+    
+    background-color: var(--bg-button);      
+    border-width: var(--border-width-button);
+    border-style: var(--border-style-button);
+    border-color: var(--border-color-button);
+  }
+  &:hover:not(:active,:disabled)::before {
+    border-color: var(--border-color-button-hover); }
+  &::after {
+    mask-size:var(--cb-size);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--fg);
+  }
+}
+[type="checkbox"] {
+  &::before {
+    border-radius: var(--border-radius-button); }
+  &::after {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' style='fill: none; stroke: currentColor; stroke-width: 1.0625'%3E%3Cpath d='m 4,7.5 3,3 5,-5'/%3E%3C/svg%3E%0A");
+  }
+}
+[type="radio"] {
+  &::before { border-radius: 50%; }
+  &::after {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cy='8' cx='8' r='4'/%3E%3C/svg%3E%0A");
+    opacity: 0.8;
+  }
+}
+/* #endregion checkbox */
+/* #endregion forms */
