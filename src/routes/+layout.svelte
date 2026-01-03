@@ -85,7 +85,7 @@
 <svelte:head>
   <title>{appName}{dev ? " : dev" : ""}</title>
   {#key darkmode}
-    <link rel="icon" href={dev ? guitar : mtn} />
+    <link rel="icon" href={dev ? guitar : guitar} />
   {/key}
 </svelte:head>
 
