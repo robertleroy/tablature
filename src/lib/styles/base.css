@@ -1,0 +1,43 @@
+/* #region Base - December 2025 */
+@layer reset, theme, forms, base;
+/* , tables, vsdark; */
+
+@import url('$lib/styles/reset.css')  layer(reset);
+@import url('$lib/styles/theme_vs')  layer(theme);
+@import url('$lib/styles/forms.css')  layer(forms);
+
+
+/* #region appwide utility */
+@layer base {
+  :root {
+    --sans-serif: "Open Sans Variable", sans-serif;
+    --monospace: 'Source Code Pro Variable', monospace;
+  }
+}
+
+select, input[type="text"] {
+  font-family: system-ui, 'Segoe UI', 
+    Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+svg {
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 1em;
+}
+
+.error { 
+  font-family: var(--monospace);
+  font-size: 0.75rem; 
+  color: tomato; 
+}
+.active {
+  color: var(--active-color);
+}
+.muted {
+  color: var(--fg-muted);
+  font-size: small;
+}
+/* #endregion appwide utility */
+/* #endregion Base */
