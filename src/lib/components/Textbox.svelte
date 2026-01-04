@@ -1,55 +1,54 @@
 <script>
-  let { searchterm = $bindable(), data, ...rest } = $props();
+  let { value=$bindable(), data, ...rest } = $props();
 </script>
 
 <div class="my-textbox">
   <input type="text" {...rest}
-    bind:value={searchterm}>
+    bind:value>
 
-  <button class="unset"
-    class:searching={searchterm.length}
-    onclick={() => {
-      searchterm = "";
-    }}> 🞫
-    <!-- {searchterm.length ? "🞫" : ""} -->
-    </button>
+  <button class="unset" 
+    class:searching={value} 
+    onclick={() => value = ""}>
+    <span>🞫</span>
+  </button>
 </div>
 
 <style>
   .my-textbox {
     display: inline flex;
     font-family: inherit;
-    height: var(--button-height, 1.5);
+    height: 1.5em;
     max-width: 100%;
     color: var(--fg-button, inherit);
     background-color: var(--bg-button, inherit);
     border: 1px solid var(--border-color, #ccc);
     border-radius: var(--border-radius, 0.25em);
     overflow: hidden;
-    vertical-align: var(--vertical-align);
+    align-content: center;
+
     input {
+			--outline-color: transparent;
       flex: 1;
       height: 100%;
       border-radius: 0;
       outline: none;
+      border-radius: 0;
     }
 
     input, button {
+      min-width: 1.5em;
       background: none;
       border: none;
-
     }
     button {
-      width: 1.5rem;
       text-align: center;
-      opacity: 0.2;
+      opacity: 0.3;
+      color: currentColor;
     }
-
     &:focus-within {
       border-color: var(--outline-color);
       outline: 1px solid var(--outline-color);
     }
-
     button.searching {
       opacity: 0.8;
     }

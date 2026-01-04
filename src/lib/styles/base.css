@@ -1,43 +1,94 @@
-/* #region Base - December 2025 */
-@layer reset, theme, forms, base;
-/* , tables, vsdark; */
-
-@import url('$lib/styles/reset.css')  layer(reset);
-@import url('$lib/styles/theme_vs')  layer(theme);
-@import url('$lib/styles/forms.css')  layer(forms);
+/* #region Base - January 2026 */
+@layer reset, forms, base;
+/*, tables, vsdark ; */
 
 
-/* #region appwide utility */
+@import url("$lib/styles/reset.css") layer(reset);
+@import url("$lib/styles/forms.css") layer(forms);
+@import url("$lib/styles/tables.css") layer(tables);
+/* @import url("$lib/styles/vsdark.css") layer(vsdark); */
+
 @layer base {
   :root {
     --sans-serif: "Open Sans Variable", sans-serif;
-    --monospace: 'Source Code Pro Variable', monospace;
+    --monospace: "Source Code Pro Variable", monospace;
+    
+    /* color-scheme: dark; */
+    /* color-scheme: light; */
+
+/* #region Colors *********************** */
+    /* Foreground */
+    --fg-1: light-dark(hsl(0 0 27), hsl(0 0 70));
+    --fg-2: light-dark(hsl(0 0 27 / 0.6), hsl(0 0 65));
+    --fg-3: light-dark(hsl(0 0 27 / 0.6), hsl(0 0 65 / 0.6));
+    --fg-muted: light-dark(hsl(0 0 27 / 0.4), hsl(0 0 65 / 0.4));
+    --fg: var(--fg-1);
+
+    /* Background */
+    --bg-1: light-dark(hsl(206 30 100), hsl(0 0 13));
+    --bg-2: light-dark(hsl(206 40 94), hsl(0 0 10));
+    --bg-3: light-dark(hsl(206 40 88), hsl(0 0 16));
+    --bg-4: light-dark(hsl(206 60 85), hsl(0 0 8));
+    --bg: var(--bg-1);
+    --bg-active: hsl(0 0 0 / 0.067);
+    --bg-hover: hsl(0 0 0 / 0.067);
+    --bg-panel: var(--bg-2);
+
+    /* Button  */
+    --border-color: light-dark(hsl(207 20 80),
+        hsl(0 0 40 / 0.2));
+    --outline-color: light-dark(hsl(207 20 70),
+        hsl(0 0 40));
+
+    --fg-button: var(--fg);
+    --bg-button: light-dark(hsl(206 40 96), hsl(0 0 18));
+
+    /* Accent */
+    --primary: hsl(206 70 60);
+    --accent: hsl(176 70 50);
+    --warning: hsl(26 70 60);
+    --error: hsl(356 70 60);
+
+    --link-color: linktext;
+    --vue-green: hsl(150 50 50);
+    --active-color: hsl(150 50 50);
+/* #endregion Colors */
+
+/* #region Heading *********************** */
+    --hero: 2em;
+    --h1: 1.5em;
+    --h2: 1.25em;
+    --h3: 1.125em;
+    --h4: 1em;
+    --h5: 0.875em;
+    --h6: 0.75em;
+/* #endregion Heading */
+
+/* #region Border *********************** */
+    --border-color: light-dark(hsl(207 20 80),
+        hsl(0 0 40 / 0.2));
+    --border: 1px solid var(--border-color);
+    --border-radius: 0.25em;
+    --outline-color: light-dark(hsl(207 20 70),
+        hsl(0 0 40));
+/* #endregion Border */
+
+/* #region Button *********************** */
+    --button-height: calc((1em + 2px) * 1.5);
+    --button-font: inherit;
+    --fg-button: var(--fg);
+    --bg-button: light-dark(hsl(206 40 96), hsl(0 0 18));
+    --bg-disabled: hsl(0 0 50 / 0.05);
+/* #endregion Button  */
+
+/* #region Misc  *********************** */
+    --max-p-width: 65ch;
+    --vertical-align: initial;
+    --duration: 500ms;
+/* #endregion Misc  */
+
+    /* --table-bg-even: light-dark(hsl(0 0 23), hsl(210 30 94));
+    --table-bg-odd: light-dark(hsl(210 30 98), hsl(0 0 13)); */
   }
 }
-
-select, input[type="text"] {
-  font-family: system-ui, 'Segoe UI', 
-    Roboto, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-}
-
-svg {
-  height: 1.5em;
-  width: 1.5em;
-  font-size: 1em;
-}
-
-.error { 
-  font-family: var(--monospace);
-  font-size: 0.75rem; 
-  color: tomato; 
-}
-.active {
-  color: var(--active-color);
-}
-.muted {
-  color: var(--fg-muted);
-  font-size: small;
-}
-/* #endregion appwide utility */
 /* #endregion Base */

@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
   import { fade, slide } from "svelte/transition";
   import { cookieNames, store } from "$lib";
-  import { dev_icon, guitar } from "$lib/assets";
+  import { dev_icon, guitar, favicon } from "$lib/assets";
   import { Menu, Textbox } from "$lib/components";
   import tabData from '$lib/data/tabs.json';
   import '@fontsource-variable/open-sans';
@@ -85,7 +85,7 @@
 <svelte:head>
   <title>{appName}{dev ? " : dev" : ""}</title>
   {#key darkmode}
-    <link rel="icon" href={dev ? guitar : guitar} />
+    <link rel="icon" href={dev ? favicon : guitar} />
   {/key}
 </svelte:head>
 
@@ -145,8 +145,7 @@
 
 {#snippet nav()}
   <div class="filters">
-    <Textbox
-      bind:searchterm
+    <Textbox bind:value={searchterm}
       placeholder="filter by title.."
       oninput={() => {
         if (selectedTuning) selectedTuning = "";
@@ -188,7 +187,7 @@
       </button>
 
       {#if store.selectedGroup === item?.group}
-        <div class="groupPanel" transition:slide={{ duration:150 }}>
+        <div class="groupPanel" transition:slide={{ duration: 250 }}>
           {#each item.tabs as tab}
             <button class="tab unset"
               onclick={() => {

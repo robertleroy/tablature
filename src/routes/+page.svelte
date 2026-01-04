@@ -89,14 +89,18 @@ import { store } from "$lib";
 
 .icon_display {
   display: grid;
-  place-items: start center;
+  place-items: center;
   height: 80%;
-  font-size: clamp(8rem, 30vw, 20rem);
+  
+  /* font-size: 4rem; */
 
   @media (min-width: 768px) { place-items: center; }
 
   svg {
+    height: 1.5em;
+    width: 1.5em;
     opacity: 0.045;
+    font-size: clamp(8rem, 35vw, 40vh);
   }
 }
 </style>

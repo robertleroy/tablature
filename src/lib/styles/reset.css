@@ -1,4 +1,4 @@
-/* #region Reset - December 2025  */
+/* #region Reset - January 2026  */
 *, *::before, *::after { box-sizing: border-box; }
 html { 
   overflow-wrap: break-word;
@@ -9,13 +9,12 @@ html {
 }
 body, h1, h2, h3, h4, h5, h6, pre, blockquote, fieldset, figure, 
 ol, ul, dl, dd, menu { margin: 0; }
-ul, ol, menu { padding-left: 2ch; }
 input, button, textarea, select { font-family: inherit; }
 img, picture, figure {
   max-width: 100%;
   height: auto;
   display: block;
-} 
+}
 p {
   line-height: 1.3125;
   margin: 0 0 1rem;
@@ -43,11 +42,9 @@ html {
   font-size: var(--font-size, 16px);
   line-height: var(--line-height, 1.5);
   background-color: var(--bg, canvas);
-  /* background-color: red; */
   color: var(--fg, canvastext);
   height: 100dvh;
   scrollbar-gutter: stable both-edges;
-  /* scrollbar-gutter: stable; */
 }
 body {
   font-size: 1em;
@@ -67,7 +64,7 @@ hr {
 /* #region Headings */
 .hero,h1,h2,h3,h4,h5,h6 {
   font-family: inherit;
-  color: var(--fg-b, inherit);
+  color: var(--fg-1, inherit);
   margin: 0 0 0.25rem; 
 }
 .hero,h1,h2,h3,h4 { text-wrap: balance; }
@@ -78,34 +75,42 @@ h3, .h3 { font-size: var(--h3, 1.125em); line-height: 1.3125; }
 h4, .h4 { font-size: var(--h4, 1em); line-height: 1.5; }
 h5, .h5 { font-size: var(--h5, 0.875em); line-height: 1.5; }
 h6, .h6 { font-size: var(--h6, 0.75em); line-height: 1.5; }
-h1, .hero { font-weight: var(--weight-700, 700); }
-h2 { font-weight: var(--weight-600, 600); }
-h3 { font-weight: var(--weight-500, 550); }
-h4 { font-weight: var(--weight-500, 500); }
-h5, h6 { font-weight: var(--weight-500, 500); }
+h1, .hero { font-weight: 700; }
+h2 { font-weight: 600; }
+h3 { font-weight: 500; }
+h4 { font-weight: 500; }
+h5, h6 { font-weight: 500; }
 /* #endregion Headings */
 
 
 /* #region Lists */
-ol, ul, dl, menu {
+menu { 
+  padding: 0;
+  margin: 0;
+  list-style-type: none; 
+}
+ol, ul, dl {
   margin: 0 0 1rem; 
   list-style-position: outside; 
 
-  ol, ul, dl, menu {
-    margin: 0;
+  ol, ul, dl {
+    padding-left: 1em;
+    margin: 0 0 0.5rem;
+    line-height: 1.6;
   }
 }
-:is(ol, ul, menu).unset {
+:is(ol, ul).unset {
   list-style-type: none;
   padding: 0;
   margin: unset;
 
-  :is(ol, ul, menu) {
+  :is(ol, ul) {
     list-style-type: none;
-    padding-left: 2ch;
+    padding: 0; 
     margin: unset;
   }
 }
+
 dl {
   display: grid;
   list-style-type: none;
@@ -113,8 +118,12 @@ dl {
   gap: 0 1rem; 
 }
 dt { 
-  font-weight: 550; 
+  font-weight: 600; 
   &::after { content: ":"; }
+  display: initial;
+}
+dd { 
+  display: grid;
 }
 /* #endregion Lists */
 
@@ -124,8 +133,7 @@ a {
   color: var(--link-color, #0000EE);
   &:active { text-decoration: none; }
 }  
-header a, 
-nav a, a.unset, .route a {
+header a, nav a, .route a, a.unset {
   color: inherit;
   &:not(:hover),
   &:active { text-decoration: none; }
@@ -187,7 +195,7 @@ fieldset { margin: 0 0 0.5rem; }
 .flex { display: flex; }
 .grid { display: grid; }
 .b { font-weight: 600; }
-.i, .em, .subtitle { font-style: italic; }
+.i, .em { font-style: italic; }
 .contents { display: contents; }
 
 /* #endregion Utility */
