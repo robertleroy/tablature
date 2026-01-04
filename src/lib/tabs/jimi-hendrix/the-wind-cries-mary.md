@@ -313,8 +313,8 @@ Artist:The Jimi Hendrix Experience
   D|---------10h12--10------------------|----------------10h12-10-----------|--------------------------|
   A|------------------------------------|------------------------12-10-8----|----------------8-10-8----|
   E|------------------------------------|--------------------------------10-|-6--7--8---8h10--------10-|
-  |
-  |rhy.gui
+   |
+   |rhy.gui
   e|------------------------------------|-----------------------------------|--------------------------|
   B|------------------------------------|-----------------------------------|--------------------------|
   G|-8--9-10----------------------------|----8-----9-----10-----------------|-8--9-10------------------|
@@ -330,8 +330,8 @@ Artist:The Jimi Hendrix Experience
   D|----------------------------------|---------10h12--10------------------|--------------------------|
   A|-8h10--9h11--10h12----------------|------------------------------------|--------------------------|
   E|----------------------------------|------------------------------------|--------------------------|
-  |
-  |
+   |
+   |
   e|----------------------------------|------------------------------------|--------------------------|
   B|----------------------------------|------------------------------------|--------------------------|
   G|----8-----9-----10----------------|-8--9-10----------------------------|-x------------------------|
@@ -353,5 +353,35 @@ Artist:The Jimi Hendrix Experience
 
   ************************************
 
-  
+  After all the jacks are in their boxes
+  And the clowns have all gone to bed
+  You can hear happiness
+  Staggering on down the street
+  Footprints dressed in red
+  And the wind whispers
+  "Mary"
+  A broom is drearily sweeping
+  Up the broken pieces
+  Of yesterday's life
+  Somewhere, a queen is weeping
+  Somewhere
+  A king has no wife
+  And the wind, it cries
+  "Mary"
+  (Instrumental)
+  The traffic lights, they turn blue tomorrow
+  And shine their emptiness down on my bed
+  The tiny island sags downstream
+  'Cause the life that lived is dead
+  And the wind screams
+  "Mary"
+  Will the wind ever remember
+  The names it has blown in the past?
+  And with this crutch
+  Its old age and its wisdom
+  It whispers, "No, this will be the last"
+  And the wind cries
+  "Mary"
+
+
 ``` 

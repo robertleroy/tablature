@@ -20,50 +20,6 @@ Author matthewnedel [a] 141.
 
 
 
-Hey Joe, where you goin' with that gun of your hand?
-Hey Joe, I said, where you goin' with that gun in your hand? Oh
-I'm goin' down to shoot my old lady
-You know I caught her messin' 'round with another man, yeah
-I'm goin' down to shoot my old lady
-You know I caught her messin' 'round with another man
-Huh, and that ain't too cool
-Hey Joe, I heard you shot your mama down
-You shot her down now
-Hey Joe, I heard you shot your lady down
-You shot her down in the ground
-Yeah
-Yes, I did, I shot her
-You know I caught her messin' 'round, messin' 'round town
-Yes, I did, I shot her
-You know I caught my old lady messin' 'round town
-And I gave her the gun
-I shot her
-Alright
-Shoot her one more time again, baby
-Yeah
-Oh, dig it
-Alright
-Hey, Joe
-Where you gonna run to now? Where you gonna run to?
-Hey Joe, I said
-Where you gonna run to now? Where you, where you gonna go?
-Well, dig
-I'm goin' way down south
-Way down to Mexico way
-Alright
-I'm goin' way down south
-Way down where I can be free
-Ain't no one gonna find me
-Ain't no hangman gonna
-He ain't gonna put a rope around me
-You better believe right now
-I gotta go now
-Hey, Joe
-You better run on down
-Goodbye, everybody, ow
-Hey, hey, Joe, run on down
-
-
 e|---0----0------------------------0--------------------|
 b|---3/5--5\3----------------------0--------------------|
 G|-------------4\2--0-0h1-----(1)--1--------------------|
@@ -450,6 +406,50 @@ E|------------------------------------------------------|
 | PM   Palm Mute
   
 ************************************
+
+
+  Hey Joe, where you goin' with that gun of your hand?
+  Hey Joe, I said, where you goin' with that gun in your hand? Oh
+  I'm goin' down to shoot my old lady
+  You know I caught her messin' 'round with another man, yeah
+  I'm goin' down to shoot my old lady
+  You know I caught her messin' 'round with another man
+  Huh, and that ain't too cool
+  Hey Joe, I heard you shot your mama down
+  You shot her down now
+  Hey Joe, I heard you shot your lady down
+  You shot her down in the ground
+  Yeah
+  Yes, I did, I shot her
+  You know I caught her messin' 'round, messin' 'round town
+  Yes, I did, I shot her
+  You know I caught my old lady messin' 'round town
+  And I gave her the gun
+  I shot her
+  Alright
+  Shoot her one more time again, baby
+  Yeah
+  Oh, dig it
+  Alright
+  Hey, Joe
+  Where you gonna run to now? Where you gonna run to?
+  Hey Joe, I said
+  Where you gonna run to now? Where you, where you gonna go?
+  Well, dig
+  I'm goin' way down south
+  Way down to Mexico way
+  Alright
+  I'm goin' way down south
+  Way down where I can be free
+  Ain't no one gonna find me
+  Ain't no hangman gonna
+  He ain't gonna put a rope around me
+  You better believe right now
+  I gotta go now
+  Hey, Joe
+  You better run on down
+  Goodbye, everybody, ow
+  Hey, hey, Joe, run on down
 
 
 ``` 

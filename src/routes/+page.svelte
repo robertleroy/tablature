@@ -79,9 +79,14 @@ import { store } from "$lib";
 
   :global {
   .tab-content {
-    pre { line-height: 1.2; }
+      
+    /* --monospace: "Courier New", monospace; */
+    pre { 
+      line-height: 1.2; 
+      font-size: 15px ;
+    }
     pre code { 
-      font-size: 13px ;
+      /* font-size: 13px ; */
       font-optical-sizing: auto;
     }
   }
