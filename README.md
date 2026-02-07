@@ -1,5 +1,46 @@
 # Tablature
 
+
+## Update
+
+### Tabs App
+
+- Add tabs as md files in `$lib/tabs`
+  - template is at: `Ωμέγα/template.md`
+- `npm run index` will read the files and populate  the json object at `$lib/data/tabs.json`
+- Push to Github
+
+```sh
+npm run index
+
+git add . && git commit -m "update"
+git push
+```
+
+### Portainer
+
+- Log in to `Portainer`.
+- Navigate to `Stacks > tabs`
+- Scroll to the `Redeploy from git repository` section.
+- Click `Pull and redeploy`
+- Ensure `Re-pull image` is toggled `ON`
+
+
+---
+
+
+## Template for next App
+
+1. Copy this Dockerfile into the root of your new project.
+2. Push to a new GitHub repo. 
+3. In Portainer, create a new Stack.
+4. In the Stack Editor, use the same YAML as before, but change 3001:3000 to 3002:3000.
+
+
+---
+
+
+
 ## Project Summary:
 
 A tablature library: A self-hosted Sveltekit app that uses Markdown files as the "database."
