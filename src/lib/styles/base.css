@@ -12,6 +12,7 @@
   :root {
     --sans-serif: "Open Sans Variable", sans-serif;
     --monospace: "Source Code Pro Variable", monospace;
+    /* --monospace: "Courier New", monospace; */
     
     /* color-scheme: dark; */
     /* color-scheme: light; */

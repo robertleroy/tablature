@@ -7,10 +7,14 @@
   --dyno-side-pad: max(0px, calc((100dvw - var(--max-app-width)) / 2));
   --dyno-main-pad: calc(var(--dyno-side-pad) + var(--sidebar-width));
   --padding: 1rem;
+  
 
   /* --sans: "Open Sans Variable", sans-serif; */
   /* --mono: 'Source Code Pro Variable', monospace; */
+
+  font-optical-sizing: auto;
 }
+body { position: relative; }
 .dark_mode {
   color-scheme: dark;
 }
@@ -18,7 +22,11 @@
 header {
   /* font-family: var(--sans); */
   position: fixed;
-  inset: 0 0 auto 0;
+  /* inset: 0 0 auto 0; */
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  /* max-width: 100%; */
   display: flex;
   align-items: center;
   height: var(--header-height);
@@ -35,7 +43,8 @@ header {
     align-items: center;
     gap: 0 1rem;
 
-    max-width: var(--max-app-width);
+    /* max-width: var(--max-app-width); */
+    width: 100%;
     padding: 0 var(--padding);
     margin: 0 var(--dyno-side-pad);
   }
@@ -184,7 +193,20 @@ menu.offcanvas {
 
 @media (min-width: 700px) {
   :root { --padding: 2rem; }
+  /* header .inner { 
+    max-width: var(--max-app-width); 
+  } */
 }
+
+
+  /* @media (max-width: 600px) and 
+    (orientation: portrait) and 
+    (hover: none) {
+    :root {
+      --font-size: 18px; 
+      
+    }
+  } */
 
 @media (min-width: 900px) {
   .menu {
@@ -201,11 +223,12 @@ menu.offcanvas {
 
 @media (min-width: 1200px) {
   main {
+    --padding: 4rem;
     inset: var(--header-height) var(--dyno-main-pad) 0 var(--dyno-main-pad);
        
     .router {
       margin: 0 auto;
-    }
+    }    
   } 
 }
 
