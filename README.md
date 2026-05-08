@@ -1,8 +1,5 @@
 # Tablature
 
-
-## Update
-
 ### Tabs App
 
 - Add tabs as md files in `$lib/tabs`

@@ -1,5 +1,5 @@
 @import "$lib/styles/base.css";
-
+ 
 :root {
   --header-height: 3rem;
   --max-app-width: 1600px;
@@ -89,13 +89,17 @@ aside {
   border-right: var(--border);
   justify-content: end;
   overflow-y: auto;
+  /* overflow-y: hidden; */
 	z-index: 10;
+  
+  /* height: calc(100% - var(--header-height)); */
 
 	.inner {
     position: relative;
 		margin-left: var(--dyno-side-pad);
     width: var(--sidebar-width);
-    height: 100%;
+    /* overflow-y: auto;
+    max-height: 100%; */
 		padding: 1rem var(--padding);
 
     display: grid;
@@ -109,6 +113,7 @@ main {
   position: absolute;
   inset: var(--header-height) 0 0 0;
   background-color: var(--bg);
+  /* overflow: hidden; */
 
   .router {
     position: relative;
@@ -160,7 +165,7 @@ menu.offcanvas {
   display: grid;
   grid-template-rows:  1fr auto;
   padding: 1rem var(--padding);
-  /* height: 100%; */
+  height: 100%;
   max-height: calc(100dvh - var(--header-height));
   min-height: 33dvh;
   background-color: var(--bg-panel);
@@ -169,12 +174,15 @@ menu.offcanvas {
   z-index: 90;
 
   nav {
-    /* position: absolute; */
-    /* top: 2rem; */
-    /* left: 2rem; */
-    /* width: 100%; */
+    z-index: 1;
+    position: absolute;
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    /* width: calc(100% - 2rem); */
+    width: 100%;
     overflow-y: auto;
-    /* max-height: 100%; */
+    max-height: 100%;
   }
 }
 

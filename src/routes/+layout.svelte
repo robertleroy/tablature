@@ -193,13 +193,14 @@
         <div class="groupPanel" transition:slide={{ duration: 250 }}>
           {#each item.tabs as tab}
             <button class="tab unset"
+              class:selected={store.selectedTab == tab}
               onclick={() => {
                 store.selectedTab = tab;
                 if (showmenu === true) {
                   showmenu = false;
                 }
             }}>
-              <span class:active={store.selectedTab === tab}>
+              <span class:active={store.selectedTab === tab} >
           {tab.title}</span>
             </button>
           {/each}
@@ -207,6 +208,10 @@
       {/if}
     {/each}
   {/if}
+
+  <!-- {#each {length: 20} as item, i}
+  <div class="item">Item {i}</div>
+  {/each} -->
 {/snippet}
 
 {#snippet guitar_snip()}
@@ -219,4 +224,7 @@
 {/snippet}
 
 <style>
+  .selected {
+    background: hsl(0 0 0 / 0.1);
+  }
 </style>

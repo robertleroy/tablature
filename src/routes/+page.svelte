@@ -36,6 +36,7 @@
   <hr />
   <div class="tab-content">
     {@html store.selectedTab?.content}
+    <br><br>
   </div>
 {:else}
   <div class="watermark">
@@ -76,6 +77,7 @@
 
   :global {
     .tab-content {
+      padding-bottom: 1.5rem;
       pre {
         line-height: 1.2;
         font-size: 15px;
