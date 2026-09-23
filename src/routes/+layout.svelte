@@ -87,6 +87,8 @@
   {#key darkmode}
     <link rel="icon" href={dev ? favicon : guitar} />
   {/key}
+  <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
+  <link rel="manifest" href="/manifest.json">
 </svelte:head>
 
 <header bind:clientWidth={appWidth}>
