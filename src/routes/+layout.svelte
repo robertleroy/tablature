@@ -3,7 +3,6 @@
   import { onMount } from "svelte";
   import { fade, slide } from "svelte/transition";
   import { cookieNames, store } from "$lib";
-  import { dev_icon, guitar, favicon } from "$lib/assets";
   import { Menu, Textbox } from "$lib/components";
   import tabData from '$lib/data/tabs.json';
   import '@fontsource-variable/open-sans';
