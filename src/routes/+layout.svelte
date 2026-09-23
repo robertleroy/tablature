@@ -85,9 +85,9 @@
 <svelte:head>
   <title>{appName}{dev ? " : dev" : ""}</title>
   {#key darkmode}
-    <link rel="icon" href={dev ? favicon : guitar} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   {/key}
-  <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/icon-192.png">
   <link rel="manifest" href="/manifest.json">
 </svelte:head>
 
