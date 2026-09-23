@@ -2,7 +2,7 @@
 id: "f79ac5362954"
 title: "American Woman"
 artist: "The Guess Who"
-artist_display: "American Woman"
+artist_display: "The Guess Who"
 album: "American Woman"
 songwriter: 
   - "Burton Cummings"

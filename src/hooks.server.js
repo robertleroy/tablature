@@ -1,6 +1,6 @@
 // import * as auth from '$lib/server/auth';import * as auth from '$lib/server/auth';
 // import { sequence } from '@sveltejs/kit/hooks';
-import { fail, redirect } from '@sveltejs/kit';
+// import { fail, redirect } from '@sveltejs/kit';
 import { cookieNames } from "$lib";
 
 
